@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://psihotrot-tech.github.io/transport-srbobran/sitemap.xml
