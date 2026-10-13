@@ -68,10 +68,10 @@ p{margin:0}
 }
 
 /* ---------- Buttons / channels ---------- */
-.channels{display:flex;flex-wrap:wrap;gap:10px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding:12px 20px;border-radius:12px;font-weight:700;font-size:1rem;text-decoration:none;border:0;cursor:pointer;font-family:var(--font-body);transition:transform .15s ease,filter .15s ease}
+.channels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:10px 14px;border-radius:12px;font-weight:700;font-size:1rem;line-height:1.1;white-space:nowrap;text-decoration:none;border:0;cursor:pointer;font-family:var(--font-body);transition:transform .15s ease,filter .15s ease}
 .btn:hover{transform:translateY(-1px);filter:brightness(1.06)}
-.btn svg{width:21px;height:21px;flex-shrink:0}
+.btn svg{width:20px;height:20px;flex-shrink:0}
 .btn-call{background:var(--beacon);color:var(--asphalt)}
 .btn-viber{background:var(--viber);color:var(--white)}
 .btn-wa{background:var(--wa);color:var(--white)}
@@ -97,16 +97,13 @@ p{margin:0}
 
 .dispatch{background:var(--white);color:var(--ink);border-radius:18px;padding:26px;box-shadow:0 30px 60px -20px rgba(0,0,0,.55);display:flex;flex-direction:column;gap:16px;min-width:0}
 .dispatch-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.dispatch-head span{font-family:var(--font-display);font-weight:700;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.status{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:.85rem;color:var(--sign)}
+.dispatch-head>span:first-child{font-family:var(--font-display);font-weight:700;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.status{display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:.85rem;color:var(--sign);white-space:nowrap}
 .status i{width:9px;height:9px;border-radius:50%;background:#1fb855}
 .num{font-family:var(--font-display);font-weight:800;font-stretch:85%;font-size:clamp(1.7rem,3.2vw,2.3rem);letter-spacing:.01em;font-variant-numeric:tabular-nums;text-decoration:none;color:var(--ink);line-height:1}
 .num-row{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
 .copy{background:var(--paper);border:1px solid var(--line);border-radius:9px;padding:8px 12px;font-weight:700;font-size:.85rem;cursor:pointer;color:var(--ink);font-family:var(--font-body)}
 .copy:hover{background:#e9ebe7}
-.dispatch .channels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
-.dispatch .btn{min-height:48px;padding:10px 12px;font-size:.95rem}
-.dispatch .btn-call{grid-column:1/-1}
 .loc-btn{width:100%;background:var(--paper);color:var(--ink);border:1.5px dashed #b9c0bb;border-radius:12px;padding:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:9px;font-family:var(--font-body);font-size:.95rem}
 .loc-btn:hover{border-color:var(--beacon-d)}
 .loc-btn svg{width:20px;height:20px;color:var(--beacon-d)}
@@ -180,8 +177,6 @@ section{padding-block:clamp(56px,8vw,100px)}
 .contact .lead{color:rgba(18,24,32,.78)}
 .contact-card{background:var(--asphalt);color:var(--white);border-radius:18px;padding:26px;display:flex;flex-direction:column;gap:16px;min-width:0}
 .contact-card .num{color:var(--white)}
-.contact-card .channels{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
-.contact-card .btn-call{grid-column:1/-1}
 .contact-card .copy{background:var(--asphalt-3);border-color:transparent;color:var(--white)}
 .meta-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;font-size:.95rem;color:rgba(255,255,255,.75)}
 @media (max-width:860px){.contact-grid{grid-template-columns:1fr}}
@@ -197,8 +192,8 @@ section{padding-block:clamp(56px,8vw,100px)}
 @media (max-width:760px){.foot-grid{grid-template-columns:1fr}}
 
 /* Sticky mobile bar */
-.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;grid-template-columns:1.4fr 1fr 1fr;gap:6px;padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px));background:rgba(18,24,32,.96);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.08)}
-.callbar .btn{min-height:50px;padding:8px;font-size:.95rem}
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:60;display:none;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:8px 8px calc(8px + env(safe-area-inset-bottom,0px));background:rgba(18,24,32,.96);backdrop-filter:blur(8px);border-top:1px solid rgba(255,255,255,.08)}
+.callbar .btn{min-height:50px;padding:8px 6px}
 @media (max-width:760px){.callbar{display:grid}}
 
 /* City page */
@@ -213,3 +208,39 @@ section{padding-block:clamp(56px,8vw,100px)}
 .reveal.d2{animation-delay:.12s}.reveal.d3{animation-delay:.24s}
 @keyframes rise{from{transform:translateY(14px);opacity:.001}to{transform:none;opacity:1}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+
+/* City pages: channel tabs in one row when there is room */
+.prose .channels{grid-template-columns:repeat(4,minmax(0,1fr));max-width:640px}
+.loc-btn{min-height:52px;font-size:1rem;text-align:center;line-height:1.25}
+
+/* ---------- Phones: one type scale, equal tabs ---------- */
+@media (max-width:760px){
+  body{font-size:16px}
+  h1{font-size:2.25rem}
+  h2{font-size:1.75rem}
+  h3{font-size:1.15rem}
+  .lead{font-size:1.02rem}
+  .eyebrow{font-size:.75rem}
+  section{padding-block:56px}
+  .sec-head{margin-bottom:28px}
+  .hero-inner{gap:28px;padding-block:40px 44px}
+  .facts{font-size:.9rem;gap:8px 16px}
+  .dispatch,.contact-card{padding:18px;border-radius:16px}
+  .num{font-size:1.75rem}
+  .prose .channels{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sign-row{font-size:1.1rem}
+  .why-list strong{font-size:1.08rem}
+  .faq summary{font-size:1rem;padding:16px 48px 16px 16px}
+  .faq details p{padding:0 16px 16px}
+}
+@media (max-width:400px){
+  h1{font-size:2rem}
+  h2{font-size:1.6rem}
+  .num{font-size:1.55rem}
+  .btn{font-size:.95rem;gap:6px;padding-inline:8px}
+  .btn svg{width:18px;height:18px}
+  .brand-txt strong{font-size:1.1rem}
+  .brand img{width:36px;height:36px}
+  .langs a{padding:5px 6px}
+  .num-row{gap:8px}
+}
