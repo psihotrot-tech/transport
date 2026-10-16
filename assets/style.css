@@ -83,7 +83,7 @@ p{margin:0}
 .hero{position:relative;background:var(--asphalt);color:var(--white);overflow:hidden}
 .hero-bg{position:absolute;inset:0}
 .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 60%}
-.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(18,24,32,.96) 0%,rgba(18,24,32,.86) 42%,rgba(18,24,32,.35) 100%)}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(18,24,32,.9) 0%,rgba(18,24,32,.62) 45%,rgba(18,24,32,.08) 100%)}
 .hero-inner{position:relative;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.9fr);gap:40px;align-items:center;padding-block:clamp(48px,8vw,96px)}
 .hero-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
 .hero .eyebrow{color:var(--beacon);display:inline-flex;align-items:center;gap:10px}
@@ -108,7 +108,7 @@ p{margin:0}
 .loc-btn:hover{border-color:var(--beacon-d)}
 .loc-btn svg{width:20px;height:20px;color:var(--beacon-d)}
 .loc-note{font-size:.85rem;color:var(--muted);min-height:1em}
-@media (max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-bg::after{background:linear-gradient(180deg,rgba(18,24,32,.82),rgba(18,24,32,.95))}}
+@media (max-width:900px){.hero-inner{grid-template-columns:1fr}.hero-bg img{object-position:72% center}.hero-bg::after{background:linear-gradient(180deg,rgba(18,24,32,.62) 0%,rgba(18,24,32,.88) 45%,rgba(18,24,32,.96) 100%)}}
 
 /* ---------- Sections ---------- */
 section{padding-block:clamp(56px,8vw,100px)}
