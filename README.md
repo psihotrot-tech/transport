@@ -4,7 +4,7 @@
 1. Na GitHub nalogu napravi novi javni repozitorijum sa imenom **transport**.
 2. Ubaci sav sadržaj ovog foldera u repozitorijum (Add file → Upload files). Fajl `.nojekyll` mora da ostane.
 3. Idi u Settings → Pages → Source: *Deploy from a branch*, grana `main`, folder `/ (root)`.
-4. Sajt će biti na adresi: https://psihotrot-tech.github.io/transport/
+4. Sajt je na adresi: https://transportsrbobran.com (domen na Namecheap-u, CNAME fajl u repozitorijumu)
 
 Ako repozitorijum nazoveš drugačije, u svim fajlovima zameni
 `https://psihotrot-tech.github.io/transport` novom adresom.
