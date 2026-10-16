@@ -24,4 +24,4 @@ Ako repozitorijum nazoveš drugačije, u svim fajlovima zameni
 - `slep-sluzba-<mesto>/` – stranice po mestima (Novi Sad, Srbobran, Vrbas, Bečej, Temerin, Kula, Zrenjanin, Bačka Palanka, Inđija, Sremska Mitrovica)
 - `assets/` – stil, skripta, logo (`logo.svg` znak, `logo-full.svg` znak sa nazivom)
 
-Fotografije: Unsplash (besplatne za komercijalnu upotrebu).
+Fotografije: vlastite fotografije Transport Srbobran (tablice zamućene).
